@@ -122,3 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+GRAPHENE_SCHEMA = 'cookbook.schema'
+GRAPHENE_SCHEMA_OUTPUT = 'data/schema.json'  # defaults to schema.json
+GRAPHENE_SCHEMA_INDENT = 2
