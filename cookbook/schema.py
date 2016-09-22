@@ -1,6 +1,7 @@
 import graphene
 
 import ingredients.schema
+from graphene.contrib.django.debug import DjangoDebugMiddleware
 
 
 class Query(ingredients.schema.Query):
@@ -10,3 +11,4 @@ class Query(ingredients.schema.Query):
 
 schema = graphene.Schema(name='Cookbook Schema')
 schema.query = Query
+schema.middlewares = [DjangoDebugMiddleware()]
